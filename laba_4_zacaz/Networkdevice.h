@@ -14,4 +14,4 @@ void GnomeSort(struct networkdevice* base, size_t num, size_t size, int compare)
 void ShellSort(struct networkdevice* base, size_t num, size_t size, int compare);
 void DoubleSort(struct networkdevice* base, size_t num, size_t size, int compare);
 
-void Reallocated(struct networkdevice* base, size_t num, int ind);
+struct networkdevice* Reallocated(struct networkdevice* base, size_t num, int ind);

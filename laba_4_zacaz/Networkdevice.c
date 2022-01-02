@@ -194,7 +194,7 @@ void DoubleSort(struct networkdevice* base, size_t num, size_t size, int compare
 	}
 }
 
-void Reallocated(struct networkdevice* base, size_t num, int ind) {
+struct networkdevice* Reallocated(struct networkdevice* base, size_t num, int ind) {
 	struct networkdevice* net_new = (struct networkdevice*)malloc(num * sizeof(struct networkdevice)); //увеличение длины массива
 	for (int i = 0; i < ind; i++) {
 		strcpy(net_new[i].name, base[i].name);
@@ -207,5 +207,5 @@ void Reallocated(struct networkdevice* base, size_t num, int ind) {
 		net_new[i + 1].onlline = base[i].onlline;
 	}
 	free(base);
-	base = net_new;
+	return net_new;
 }

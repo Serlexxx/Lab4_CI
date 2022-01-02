@@ -49,7 +49,7 @@ int main(void)
 						}
 					}
 					size_struct++;
-					Reallocated(net, size_struct, ind);
+					net = Reallocated(net, size_struct, ind);
 					printf("Введине название:	");
 					scanf("%s\b", &net[ind].name);
 					fflush(NULL);
@@ -112,7 +112,7 @@ int main(void)
 						}
 					}
 					size_struct++;
-					Reallocated(net, size_struct, ind);
+					net = Reallocated(net, size_struct, ind);
 					int size_name = rand() % 20 + 5;
 					for (int i = 0; i < size_name; i++) {
 						char c = rand() % (122-97+1) + 97; //генерация случайного названия по таблице аски
